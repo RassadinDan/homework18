@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace FactoryLogic
 {
-    public class Class1
+    internal interface IAnimal
     {
+        string AnimalClass { get; }
+
+        string AnimalSpecies { get; set; }
     }
 }
