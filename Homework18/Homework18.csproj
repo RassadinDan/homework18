@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FactoryLogic\FactoryLogic.csproj">
+      <Project>{01f43a48-b991-470f-8097-da3e684e6f7c}</Project>
+      <Name>FactoryLogic</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

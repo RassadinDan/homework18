@@ -43,9 +43,12 @@
   <ItemGroup>
     <Compile Include="Amphibian.cs" />
     <Compile Include="Bird.cs" />
+    <Compile Include="Factory.cs" />
     <Compile Include="IAnimal.cs" />
     <Compile Include="Mammal.cs" />
+    <Compile Include="NullAnimal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

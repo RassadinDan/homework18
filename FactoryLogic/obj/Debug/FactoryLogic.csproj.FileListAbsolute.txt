@@ -1,0 +1,6 @@
+D:\Work\Homework\Homework18\FactoryLogic\bin\Debug\FactoryLogic.dll
+D:\Work\Homework\Homework18\FactoryLogic\bin\Debug\FactoryLogic.pdb
+D:\Work\Homework\Homework18\FactoryLogic\obj\Debug\FactoryLogic.csproj.AssemblyReference.cache
+D:\Work\Homework\Homework18\FactoryLogic\obj\Debug\FactoryLogic.csproj.CoreCompileInputs.cache
+D:\Work\Homework\Homework18\FactoryLogic\obj\Debug\FactoryLogic.dll
+D:\Work\Homework\Homework18\FactoryLogic\obj\Debug\FactoryLogic.pdb

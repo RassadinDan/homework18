@@ -21,9 +21,35 @@ namespace Homework18
     /// </summary>
     public partial class MainWindow : Window
     {
+        Repository repository;
         public MainWindow()
         {
+            repository = new Repository();
             InitializeComponent();
+            repository.Load();
+            Animals.ItemsSource = repository.animals;
+        }
+
+        private void EnterBut_Click(object sender, RoutedEventArgs e)
+        {
+            if (Animals.SelectedItem != null)
+            {
+                repository.Change(Animals.SelectedIndex, Species.Text);
+            }
+            else
+            {
+                repository.Add(Factory.NewAnimal(Class.Text, Species.Text));
+            }
+        }
+
+        private void DeleteBut_Click(object sender, RoutedEventArgs e)
+        {
+            repository.Remove(Animals.SelectedIndex);
+        }
+
+        private void SaveBut_Click(object sender, RoutedEventArgs e)
+        {
+            repository.Save();
         }
     }
 }

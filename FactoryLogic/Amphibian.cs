@@ -12,5 +12,15 @@ namespace FactoryLogic
         public string AnimalClass { get { return ac; } }
 
         public string AnimalSpecies { get; set; }
+
+        public Amphibian(string species)
+        {
+            AnimalSpecies = species;
+        }
+
+        public override string ToString()
+        {
+            return $"{AnimalClass}, {AnimalSpecies}";
+        }
     }
 }
