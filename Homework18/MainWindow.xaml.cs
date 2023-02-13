@@ -33,6 +33,7 @@ namespace Homework18
 
         private void EnterBut_Click(object sender, RoutedEventArgs e)
         {
+            /// Если выбран какой-то item то это же событие позволяет изменить данные внутри него. В противном случае будет создан новый.
             if (Animals.SelectedItem != null)
             {
                 repository.Change(Animals.SelectedIndex, Species.Text);
@@ -52,7 +53,8 @@ namespace Homework18
 
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
-            repository.Save();
+            string data = repository.SavePrep();
+            TxtSaver saver = new TxtSaver(@"AnimalsSave");
             MessageBox.Show("Данные сохранены.", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
