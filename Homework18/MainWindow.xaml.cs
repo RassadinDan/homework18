@@ -53,9 +53,9 @@ namespace Homework18
 
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
-            string data = repository.SavePrep();
+            string data = repository.SavePrep();    // Запись списка животных в одну строчную переменную.
             TxtSaver saver = new TxtSaver(@"AnimalsSave");
-            saver.Save(data);
+            saver.Save(data);   // Сохранение.
             MessageBox.Show("Данные сохранены.", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 

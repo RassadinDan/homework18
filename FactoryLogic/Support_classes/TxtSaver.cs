@@ -16,6 +16,10 @@ namespace FactoryLogic
             this.FileName = FileName;
         }
 
+        /// <summary>
+        /// Метод принимает текст, и сохраняет его в .txt формате.
+        /// </summary>
+        /// <param name="Data"></param>
         public void Save(string Data)
         {
             StreamWriter stream = new StreamWriter(Path.GetFullPath($@"{FileName}.txt"));

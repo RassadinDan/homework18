@@ -55,6 +55,10 @@ namespace FactoryLogic
             stream.Close();
         }
 
+        /// <summary>
+        /// Метод конвертирует все параметры списка животных в одну переменную, подготавливая список к сохранению.
+        /// </summary>
+        /// <returns></returns>
         public string SavePrep()
         {
             string res = string.Empty;
