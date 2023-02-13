@@ -55,6 +55,7 @@ namespace Homework18
         {
             string data = repository.SavePrep();
             TxtSaver saver = new TxtSaver(@"AnimalsSave");
+            saver.Save(data);
             MessageBox.Show("Данные сохранены.", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
 
