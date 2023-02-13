@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,10 +37,20 @@ namespace FactoryLogic
 
             string text = stream.ReadToEnd();
             string[] lines = text.Split('\n');
+
+            
             foreach(string line in lines) 
-            { 
-                string[] subline = line.Split('/');
-                Add(Factory.NewAnimal(subline[0], subline[1]));
+            {
+                try
+                {
+
+                    string[] subline = line.Split('/');
+                    Add(Factory.NewAnimal(subline[0], subline[1]));
+                }
+                catch (IndexOutOfRangeException)
+                {
+                    
+                }
             }
             stream.Close();
         }

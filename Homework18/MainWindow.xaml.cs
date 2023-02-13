@@ -26,6 +26,7 @@ namespace Homework18
         {
             repository = new Repository();
             InitializeComponent();
+
             repository.Load();
             Animals.ItemsSource = repository.animals;
         }
@@ -40,16 +41,19 @@ namespace Homework18
             {
                 repository.Add(Factory.NewAnimal(Class.Text, Species.Text));
             }
+            Animals.Items.Refresh();
         }
 
         private void DeleteBut_Click(object sender, RoutedEventArgs e)
         {
             repository.Remove(Animals.SelectedIndex);
+            Animals.Items.Refresh();
         }
 
         private void SaveBut_Click(object sender, RoutedEventArgs e)
         {
             repository.Save();
+            MessageBox.Show("Данные сохранены.", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
     }
 }
