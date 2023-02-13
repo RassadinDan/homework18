@@ -55,5 +55,11 @@ namespace Homework18
             repository.Save();
             MessageBox.Show("Данные сохранены.", "Сохранение", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+        private void Animals_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            Class.Text = repository.animals[Animals.SelectedIndex].AnimalClass;
+            Species.Text = repository.animals[Animals.SelectedIndex].AnimalSpecies;
+        }
     }
 }

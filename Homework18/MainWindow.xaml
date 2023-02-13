@@ -24,7 +24,7 @@
                  Grid.RowSpan="5"
                  FontSize="18"
                  Margin="10,10,10,10"
-                 ItemsSource="{Binding}"></ListBox>
+                 ItemsSource="{Binding}" SelectionChanged="Animals_SelectionChanged"></ListBox>
 
         <TextBox x:Name="Class"
                  Grid.Column="1"
